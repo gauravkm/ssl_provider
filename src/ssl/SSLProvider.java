@@ -20,7 +20,7 @@ public class SSLProvider extends ASSLProvider
         registrationParams.setUseClientMode(_useClientMode);
         SecureConnection connection = new SecureConnection(_context, registrationParams, listener);
         _secureConnectionCache.put(registrationParams.getEndpoint(), connection);
-        //TODO: start handshake?
+        connection.shakeHands();
     }
 
     @Override

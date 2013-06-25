@@ -123,4 +123,9 @@ public class SecureConnection
         }
         _listener.connectionClosed(_endpoint);
     }
+
+    public void shakeHands()
+    {
+       _handshakeHandler.shakeHands();
+    }
 }
